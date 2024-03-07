@@ -6,103 +6,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drone Photography for Travel</title>
     <style>
-        /* Inline CSS for basic styling */
+        /* Basic styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f2f2f2;
         }
-    
+
+        /* Header styles */
         header {
             background-color: #1c9cbc;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
-    
+
+        /* H2 Header styles */
+        .h2-header {
+            background-color: #1c9cbc;
+            /* Match the background color of the header */
+            color: #fff;
+            /* Text color */
+            padding: 10px 20px;
+            /* Add padding for better visual appearance */
+            border-radius: 5px;
+            /* Add rounded corners */
+            margin-bottom: 20px;
+            /* Add margin to separate sections */
+            text-align: center;
+        }
+
+        /* Navigation styles */
         nav {
-            background-color: #333; 
-            padding: 10px 0; 
+            background-color: #333;
+            padding: 10px 0;
             text-align: center;
         }
 
         nav ul {
             list-style-type: none;
-            margin: 0; 
+            margin: 0;
             padding: 0;
             text-align: center;
         }
 
         nav li {
-            display: inline; 
+            display: inline;
             margin-right: 20px;
         }
 
         nav a {
-            color: #fff; 
+            color: #fff;
             padding: 10px 15px;
             border-radius: 5px;
-            transition: background-color 0.3s; 
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
         }
 
         nav a:hover {
             background-color: #555;
+            text-decoration: none;
         }
-    
+
+        /* Section styles */
         section {
             padding: 20px;
         }
-    
+
+        /* Article styles */
         article {
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
         }
-        
+
+        /* Gallery styles */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-gap: 20px;
         }
-        .drone{
+
+        /* Other drones section */
+        #other-drones {
+            padding: 20px;
+            /* Added padding */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /* Adjusted min width */
+            grid-gap: 20px;
+        }
+
+        /* Drone header styles */
+        #other-drones .drone-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #other-drones .drone-header h2 {
+            color: #333;
+            margin: 0;
+        }
+
+        /* Drone styles */
+        #other-drones .drone {
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-template-rows: auto 1fr auto;
             grid-gap: 10px;
             padding: 20px;
         }
-    
+
+        #other-drones img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #other-drones h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #other-drones p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        #other-drones a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #other-drones a:hover {
+            text-decoration: underline;
+        }
+
+        #other-drones h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Image styles */
         img {
             width: 100%;
             height: auto;
             object-fit: cover;
         }
-    
+
+        /* Heading styles */
         h2 {
             color: #333;
         }
-    
+
+        /* Paragraph styles */
         p {
             color: #666;
             line-height: 1.5;
         }
-    
+
+        /* Anchor styles */
         a {
             color: #007bff;
             text-decoration: none;
         }
-    
+
         a:hover {
             text-decoration: underline;
         }
-    
-</style>
-    
+
+        /* Navigation container styles */
+        .nav-container {
+            text-align: center;
+        }
+
+        /* Navigation item styles */
+        .nav-item {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 15px;
+            background-color: #1c9cbc;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .nav-item:hover {
+            background-color: #007bff;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -112,18 +215,19 @@
         <p>Capturing breathtaking views from above</p>
     </header>
 
-    <nav>
-        <a href="#considerations">Choosing the Ultimate Travel Drone</a>
-        <a href="#drone">DJI Mavic Air 2</a>
-        <a href="#other-drones">Other Drones</a>
-        <a href="#assessories">Accessories</a>
-        <a href="#photo-gallery">Gallery</a>
-
-    </nav>
-
+    <div class="nav-container">
+        <a href="#considerations" class="nav-item">Choosing the Ultimate Travel Drone</a>
+        <a href="#drone" class="nav-item">DJI Mavic Air 2</a>
+        <a href="#other-drones" class="nav-item">Other Drones</a>
+        <a href="#assessories" class="nav-item">Accessories</a>
+        <a href="#photo-gallery" class="nav-item">Gallery</a>
+    </div>
+    <div class="h2-header">
+        <h2>Considerations when Choosing a Drone for Travel</h2>
+    </div>
     <section id="considerations">
         <article>
-            <h2>Considerations when Choosing a Drone for Travel</h2>
+            <!-- <h2>Considerations when Choosing a Drone for Travel</h2> -->
             <p>Drone photography offers unparalleled opportunities for capturing stunning aerial shots while traveling.
                 Here are some important factors to consider when selecting a drone for travel:</p>
             <ul>
@@ -146,79 +250,99 @@
                     target="_blank">Choosing the Best Drone for Travel Vloggers</a>.</p>
         </article>
     </section>
-
+    <div class="h2-header">
+        <h2>Why Choose Mavic Air 2?</h2>
+    </div>
     <section id="drone">
         <article>
-        <h2>Unlocking Travel Photography with DJI Mavic Air 2</h2>
-        <ul class="features">
-            <li class="feature">
-                <h3>Compact Design</h3>
-                <p>The Mavic Air 2's sleek and foldable design ensures easy portability, allowing you to capture
-                    stunning aerial views wherever your adventures take you.</p>
-            </li>
-            <li class="feature">
-                <h3>High-Resolution Camera</h3>
-                <p>Equipped with a 48-megapixel camera and capable of shooting 4K video at 60fps, the Mavic Air 2
-                    delivers unparalleled image quality, capturing every detail with precision and clarity.</p>
-            </li>
-            <li class="feature">
-                <h3>Extended Flight Time</h3>
-                <p>With a maximum flight time of up to 34 minutes, the Mavic Air 2 provides ample opportunity to explore
-                    and capture breathtaking landscapes from above.</p>
-            </li>
-            <li class="feature">
-                <h3>Intelligent Shooting Modes</h3>
-                <p>Take your photography to new heights with intelligent shooting modes such as SmartPhoto, HDR, and
-                    Hyperlapse, allowing you to unleash your creativity and capture dynamic aerial shots effortlessly.
-                </p>
-            </li>
-            <li class="feature">
-                <h3>Advanced Flight Performance</h3>
-                <p>Featuring advanced obstacle sensors and intelligent flight modes, the Mavic Air 2 ensures stable and
-                    safe flight performance in any environment, empowering you to focus on capturing the perfect shot.
-                </p>
-            </li>
-        </ul>
+            <!-- <h2>Why Choose Mavic Air 2?</h2> -->
+            <ul class="features">
+                <li class="feature">
+                    <h3>Compact Design</h3>
+                    <p>The Mavic Air 2's sleek and foldable design ensures easy portability, allowing you to capture
+                        stunning aerial views wherever your adventures take you.</p>
+                </li>
+                <li class="feature">
+                    <h3>High-Resolution Camera</h3>
+                    <p>Equipped with a 48-megapixel camera and capable of shooting 4K video at 60fps, the Mavic Air 2
+                        delivers unparalleled image quality, capturing every detail with precision and clarity.</p>
+                </li>
+                <li class="feature">
+                    <h3>Extended Flight Time</h3>
+                    <p>With a maximum flight time of up to 34 minutes, the Mavic Air 2 provides ample opportunity to
+                        explore
+                        and capture breathtaking landscapes from above.</p>
+                </li>
+                <li class="feature">
+                    <h3>Intelligent Shooting Modes</h3>
+                    <p>Take your photography to new heights with intelligent shooting modes such as SmartPhoto, HDR, and
+                        Hyperlapse, allowing you to unleash your creativity and capture dynamic aerial shots
+                        effortlessly.
+                    </p>
+                </li>
+                <li class="feature">
+                    <h3>Advanced Flight Performance</h3>
+                    <p>Featuring advanced obstacle sensors and intelligent flight modes, the Mavic Air 2 ensures stable
+                        and
+                        safe flight performance in any environment, empowering you to focus on capturing the perfect
+                        shot.
+                    </p>
+                </li>
+            </ul>
 
-        <p>For more detailed information, you can refer to the article <a
-            href="https://www.dpreview.com/reviews/review-the-dji-mavic-air-2-is-the-best-all-around-drone-for-most-people"
-            target="_blank">DJI Mavic Air 2</a>.</p>
+            <p>For more detailed information, you can refer to the article <a
+                    href="https://www.dpreview.com/reviews/review-the-dji-mavic-air-2-is-the-best-all-around-drone-for-most-people"
+                    target="_blank">DJI Mavic Air 2</a>.</p>
         </article>
-        
+
     </section>
-    <section id="other-drones">
+    <div class="h2-header">
         <h2>Explore More Drone Options</h2>
+    </div>
+    <section id="other-drones">
         <article class="drone">
             <img src="drone1.jpg" alt="Mavic 3">
             <p><strong>Mavic 3</strong></p>
-            <p><a href=""target="_blank">More information</a></p>
+            <p>A high-performance drone equipped with advanced camera features and long flight time, perfect for
+                capturing stunning aerial footage during travel adventures.</p>
+            <p><a href="#" target="_blank">More information</a></p>
         </article>
         <article class="drone">
             <img src="drone2.jpeg" alt="Parrot ANAFI">
             <p><strong>Parrot ANAFI </strong></p>
-            <p><a href=""target="_blank">More information</a></p>
+            <p>An ultra-portable drone known for its compact design and impressive camera capabilities, making it an
+                ideal choice for travel photographers seeking versatility and convenience.</p>
+            <p><a href="#" target="_blank">More information</a></p>
         </article>
         <article class="drone">
             <img src="drone3.jpeg" alt="DJI Mavic Mini 2 ">
             <p><strong>DJI Mavic Mini 2 </strong></p>
-            
-            <p><a href=""target="_blank">More information</a></p>
+            <p>A lightweight and beginner-friendly drone featuring enhanced stability and intelligent flight modes,
+                suitable for capturing stunning aerial shots with ease.</p>
+            <p><a href="#" target="_blank">More information</a></p>
         </article>
         <article class="drone">
             <img src="drone4.jpeg" alt="Karma Drone By GoPro ">
             <p><strong>Karma Drone By GoPro </strong></p>
-            <p><a href=""target="_blank">More information</a></p>
+            <p>A versatile drone designed for action-packed adventures, offering exceptional image quality and reliable
+                performance in various outdoor environments.</p>
+            <p><a href="#" target="_blank">More information</a></p>
         </article>
         <article class="drone">
-            <img src="drone5.jpeg" alt=" SwellPro Spry">
-            <p><strong> SwellPro Spry</strong></p>
-            <p><a href=""target="_blank">More information</a></p>
+            <img src="drone5.jpeg" alt="SwellPro Spry">
+            <p><strong>SwellPro Spry</strong></p>
+            <p>A rugged and waterproof drone capable of capturing stunning aerial footage in challenging weather
+                conditions and water-based environments, perfect for outdoor enthusiasts and adventure seekers.</p>
+            <p><a href="#" target="_blank">More information</a></p>
         </article>
     </section>
-    
+
+    <div class="h2-header">
+        <h2>Optimal Example of a Drone for Travel</h2>
+    </div>
     <section id="example">
         <article>
-            <h2>Optimal Example of a Drone for Travel</h2>
+            <!-- <h2>Optimal Example of a Drone for Travel</h2> -->
             <p>One exemplary drone model suitable for travel is the DJI Mavic Air 2. This compact and foldable drone
                 combines portability with advanced features, making it an ideal companion for travel photography
                 enthusiasts.</p>
@@ -242,10 +366,12 @@
                     href="https://www.dji.com/mavic-air-2" target="_blank">DJI Mavic Air 2</a> for more details!</p>
         </article>
     </section>
-
+    <div class="h2-header">
+        <h2>Photo Gallery</h2>
+    </div>
     <section id="gallery">
         <article>
-            <h2>Photo Gallery</h2>
+            <!-- <h2>Photo Gallery</h2> -->
             <div class="gallery">
                 <img src="cityview.jpeg" alt="Aerial view of city" title="Aerial view of city">
                 <img src="mountainlandscape.jpeg" alt="Mountain landscape" title="Mountain landscape">
