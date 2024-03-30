@@ -1,13 +1,17 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica', sans-serif;
-    background-color: #FFFFFF; /* White background for readability */
-    color: #4A4A4A; /* Grey for text */
+    background-color: #FFFFFF;
+    color: #4A4A4A;
+
 }
-/* Button Enhancements */
+
+
 .header-nav ul button {
-    background-color: #2B3A67; /* Dark blue background */
+    background-color: #2B3A67;
+
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -26,6 +30,7 @@ body, html {
     background-color: #0056b3;
     transform: scale(1.05);
 }
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -39,10 +44,12 @@ body, html {
     overflow: hidden;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
+
 .gallery-item:hover {
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
-    transform: translateY(-10px); /* Slight lift */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
+
 .gallery-item img {
     width: 100%;
     display: block;
@@ -91,7 +98,7 @@ body, html {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    
+
 }
 
 
@@ -120,9 +127,7 @@ header {
 
 .profile-pic {
     width: 100px;
-    /* Adjust as needed */
     height: 100px;
-    /* Adjust as needed */
     border-radius: 50%;
     margin: 0 auto;
 }
@@ -162,16 +167,32 @@ main {
     padding: 20px;
 }
 
-section {
-    margin-bottom: 1em;
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
-section h2 {
-    color: #007bff;
-    margin-bottom: 10px;
+.section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.main, footer {
+.section-image img {
+    justify-content: end;
+    width: auto;
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    border-radius: 10px; 
+    object-fit: contain;
+}
+
+.main,
+footer {
     padding: 20px;
     text-align: center;
 }
@@ -211,22 +232,24 @@ footer a {
     color: #666;
 }
 
-
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 768px) {
 
-    /* Stack text and image on smaller screens */
     #bio .container {
         flex-direction: column;
         align-items: center;
-        /* Center-align items for a better mobile view */
     }
-
     .bio-image img {
         max-width: 100%;
-        /* Allow the image to be full width on smaller screens */
     }
 }
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
