@@ -1,5 +1,6 @@
-html, body {
-    height: 100%; /* Ensures the page takes up full viewport height */
+html,
+body {
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Helvetica', sans-serif;
@@ -7,9 +8,42 @@ html, body {
 
 body {
     display: flex;
-    flex-direction: column; /* Stacks main content and footer */
-    min-height: 100vh; /* Uses viewport height to ensure at least full-screen height */
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #d7b80a;
 }
+
+/* Error Page */
+
+.error-page {
+    background: url('images/404.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+}
+
+.error-page .header-content {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.error-page .header-nav-404 ul {
+    background: transparent;
+}
+
+
 /* Header */
 header {
     background-image: linear-gradient(to right, #2B3A67, #1D2B53);
@@ -31,6 +65,7 @@ header h1 {
     align-items: center;
     padding: 5;
 }
+
 
 .header-nav ul {
     list-style: none;
@@ -57,9 +92,11 @@ header h1 {
     font-weight: bold;
 }
 
-.header-nav ul button:hover, .header-nav ul button a:hover, .header-nav ul button a:focus {
+.header-nav ul button:hover,
+.header-nav ul button a:hover,
+.header-nav ul button a:focus {
     background-color: #0056b3;
-    color: #ffcc00; 
+    color: #ffcc00;
     transform: scale(1.05);
     transition: color 0.3s ease, background-color 0.3s, transform 0.2s;
 }
@@ -67,57 +104,61 @@ header h1 {
 /* Main Contents and Sections */
 main {
     padding: 20px;
-    padding-bottom: 80px; /* Adjust this value based on the actual height of your footer */
-    flex: 1; /* Allows the main content to grow and push the footer down */
-
-
+    padding-bottom: 80px;
+    flex: 1;
 }
 
 .info-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 50px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 4);
+
 }
 
+
 .section-content {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.section-image img, .photo img {
-    width: auto;
-    max-width: 100%;
-    max-height: 400px;
-    height: auto;
-    border-radius: 10px;
-    object-fit: contain;
-    transition: transform 0.3s ease-in-out;
+/* About Me Section */
+.section-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
 }
 
-.section-image img:hover, .photo img:hover {
+.section-image img:hover,
+.photo img:hover {
     transform: scale(1.05);
 }
+
 .school-image {
     float: right;
-    margin: 0 0 20px 20px; /* Adjust margins as necessary */
-    width: 750px; /* Increased width */
-    max-width: 100%; /* Ensures image is not bigger than its container */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 10px; /* Optional: Rounds the corners of the image */
+    margin: 0 0 20px 20px;
+    width: 750px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
+
 .university-image {
     float: left;
-    margin: 0 20px 30px 0; /* Space on the right and bottom */
-    width: 100%; /* Full width within its container */
-    max-width: 600px; /* Max width, but can scale down on smaller screens */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 10px; /* Rounded corners for the image */
+    margin: 0 20px 30px 0;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
 }
-
-
 
 /* Gallery Size */
 .gallery {
@@ -156,6 +197,22 @@ main {
     transform: translateY(0);
 }
 
+.experience-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+.experience-image img {
+    max-width: 400px;
+    /* Or whatever size you prefer */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
 /* Photo Style */
 
 .photo-grid {
@@ -166,7 +223,7 @@ main {
 }
 
 .photo {
-    border: 1px solid #5b635b;
+    border: 1px solid #7f907f;
     padding: 5px;
     text-align: center;
 }
@@ -188,96 +245,64 @@ main {
     font-style: italic;
     color: #666;
 }
+
 /* High Skl Visit */
 .visit-images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a flexible number of columns */
-    gap: 20px; /* Space between grid items */
-    justify-content: center; /* Center the items in the grid */
-    padding: 20px; /* Padding around the entire grid for some spacing */
-}
-
-.visit-item {
-    text-align: center; /* Center-align the caption and image */
-}
-
-.visit-caption {
-    margin-top: 8px; /* Spacing between image and caption */
-    font-size: 14px; /* Adjust font size as needed */
-    color: #666; /* Caption text color */
-}
-
-.visit-image {
-    width: 100%; /* Make the image responsive to its container's width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Adds rounded corners to your images */
-}
-
-/* Interns Images */
-.companies-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    justify-items: center; /* Center items horizontally in the grid area */
+    justify-content: center;
     padding: 20px;
 }
 
-.company-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items vertically */
+.visit-item {
     text-align: center;
 }
 
-.company-logo{
-    width: 100px; /* Uniform width for square shape */
-    height: 100px; /* Uniform height for square shape */
-    padding: 10px; /* Add some spacing around the image */
-    background-color: transparent; /* Ensure background is transparent */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+.visit-caption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.visit-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Interns Images */
+.companies-grid {
+    display: grid;
+    box-shadow: 4px 0 8px rgba(4, 4, 4, 4);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+
+}
+
+.company-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.company-logo {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .company-logo:hover {
-    transform: scale(1.1); /* Slightly enlarge logos on hover */
+    transform: scale(1.1);
 }
-
-
-
-
-/* Button For Projects */
-.btn-wrapper {
-    position: absolute;
-    bottom: 10px; /* Adjust as needed to position from the bottom */
-    left: 50%; /* Start at 50% from the left */
-    transform: translateX(-50%); /* Center the button */
-    margin: 0; /* Override any margin if necessary */
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff; /* GitHub's color, or choose your own */
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-}
-
-.btn:hover, .btn:focus {
-    background-color: #0056b3; /* Darker shade for hover state */
-    color: #ffffff;
-    text-decoration: none; /* Ensures the text is not underlined on hover */
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
-}
-
 
 /* Footer Style */
 footer {
@@ -292,7 +317,7 @@ footer {
 footer a {
     color: white;
     font-weight: bold;
-    text-decoration: none; /* Removes underline from links */
+    text-decoration: none;
 }
 
 .social-links {
@@ -300,18 +325,19 @@ footer a {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 10px; /* Replaces margin-right and provides spacing between icons */
+    gap: 10px;
 }
+
 /* Projects Section */
 .projects-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center-align flex items on the cross axis */
-    justify-content: center; /* Center content vertically if needed */
-    width: 100%; /* Take full width to center-align in the viewport */
-    max-width: 1200px; /* Maximum width of the container */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Add some padding */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
@@ -321,7 +347,7 @@ footer a {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     justify-content: center;
-    align-items: start; /* Start alignment will align the grid items to the top */
+    align-items: start;
 }
 
 .project-item {
@@ -330,12 +356,12 @@ footer a {
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    /* Ensure project items don't stretch to fill the grid column */
-    width: 100%; /* Adjust if necessary to fit your design */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-.project-item h3, .project-item p {
+.project-item h3,
+.project-item p {
     padding: 10px;
 }
 
@@ -350,23 +376,26 @@ footer a {
 .project-image {
     width: 100%;
     height: auto;
-    display: block; /* Ensure images are block-level to remove bottom space */
+    display: block;
     border-bottom: 1px solid #ddd;
     margin-left: auto;
-    margin-right: auto; /* Center images within their containers */
+    margin-right: auto;
 }
-
 
 
 /* Responsive */
 @media (max-width: 768px) {
-    .info-section, .header-content, #bio .container {
+
+    .info-section,
+    .header-content,
+    #bio .container {
         grid-template-columns: 1fr;
         flex-direction: column;
         align-items: center;
     }
 
-    .bio-image img, .gallery {
+    .bio-image img,
+    .gallery {
         max-width: 100%;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
